@@ -1,0 +1,1633 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Marina Dutt Real Estate | Dubai — Luxury · Integrity · Excellence</title>
+<meta name="description" content="Marina Dutt Real Estate Dubai — Your trusted luxury property specialist. German precision meets Dubai ambition. RERA certified agent specialising in Palm Jumeirah, Downtown Dubai, Emirates Hills and beyond.">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Outfit:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+  --navy: #1a1f2e;
+  --navy-deep: #0f1219;
+  --gold: #b8926a;
+  --gold-light: #d4b896;
+  --gold-bright: #c9a87c;
+  --cream: #f5f0ea;
+  --cream-dark: #e8e0d5;
+  --white: #ffffff;
+  --text-dark: #2a2a2a;
+  --text-muted: #6b6b6b;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Outfit', sans-serif;
+  color: var(--navy);
+  background: var(--cream);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ===========================
+   PRELOADER
+=========================== */
+.preloader {
+  position: fixed; inset: 0; z-index: 9999;
+  background: var(--navy-deep);
+  display: flex; align-items: center; justify-content: center;
+  flex-direction: column; gap: 1.5rem;
+  transition: opacity 1s ease, visibility 1s ease;
+}
+.preloader.hidden { opacity: 0; visibility: hidden; }
+.preloader-logo {
+  width: 180px;
+  animation: preloaderPulse 1.8s ease-in-out infinite;
+}
+.preloader-tagline {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 0.8rem;
+  color: rgba(184,146,106,0.6);
+  letter-spacing: 0.45em;
+  text-transform: uppercase;
+  font-weight: 300;
+  animation: preloaderPulse 1.8s ease-in-out infinite 0.3s;
+}
+@keyframes preloaderPulse {
+  0%, 100% { opacity: 0.3; }
+  50% { opacity: 1; }
+}
+
+/* ===========================
+   NAV
+=========================== */
+nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  padding: 1.2rem 4rem;
+  display: flex; align-items: center; justify-content: space-between;
+  transition: all 0.5s ease;
+  background: transparent;
+}
+nav.scrolled {
+  background: rgba(15, 18, 25, 0.97);
+  backdrop-filter: blur(20px);
+  padding: 0.7rem 4rem;
+  box-shadow: 0 4px 30px rgba(0,0,0,0.35);
+}
+.nav-logo {
+  display: flex; align-items: center; gap: 0.8rem;
+}
+.nav-logo img {
+  height: 52px;
+  transition: height 0.4s ease;
+  object-fit: contain;
+}
+nav.scrolled .nav-logo img { height: 40px; }
+.nav-links {
+  display: flex; gap: 2.5rem; align-items: center;
+  list-style: none;
+}
+.nav-links a {
+  font-size: 0.76rem; font-weight: 400;
+  color: rgba(255,255,255,0.75);
+  text-decoration: none;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  transition: color 0.3s;
+  position: relative;
+}
+.nav-links a::after {
+  content: ''; position: absolute;
+  bottom: -4px; left: 0; width: 0; height: 1px;
+  background: var(--gold);
+  transition: width 0.4s ease;
+}
+.nav-links a:hover { color: var(--white); }
+.nav-links a:hover::after { width: 100%; }
+.nav-cta {
+  padding: 0.55rem 1.7rem !important;
+  border: 1px solid var(--gold) !important;
+  color: var(--gold) !important;
+  font-size: 0.7rem !important;
+  letter-spacing: 0.2em !important;
+  transition: all 0.4s ease !important;
+}
+.nav-cta:hover {
+  background: var(--gold) !important;
+  color: var(--navy-deep) !important;
+}
+.nav-cta::after { display: none !important; }
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  z-index: 200;
+}
+.hamburger span {
+  width: 26px; height: 1.5px;
+  background: var(--white);
+  transition: all 0.3s ease;
+}
+
+/* Mobile nav */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(15,18,25,0.98);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2.5rem;
+    z-index: 150;
+  }
+  .nav-links.mobile-open { display: flex; }
+  .nav-links a { font-size: 1.1rem; }
+  .hamburger { display: flex; }
+}
+
+/* ===========================
+   HERO
+=========================== */
+.hero {
+  height: 100vh; min-height: 700px;
+  position: relative;
+  display: flex; align-items: center;
+  overflow: hidden;
+}
+.hero-bg {
+  position: absolute; inset: 0;
+  background:
+    linear-gradient(135deg, rgba(15,18,25,0.93) 0%, rgba(26,31,46,0.68) 50%, rgba(15,18,25,0.88) 100%),
+    url('https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=1920&q=80') center/cover no-repeat;
+}
+.hero-grain {
+  position: absolute; inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
+  opacity: 0.5;
+  pointer-events: none;
+}
+.hero-line {
+  position: absolute;
+  left: 4rem; top: 0; bottom: 0;
+  width: 1px;
+  background: linear-gradient(to bottom, transparent, rgba(184,146,106,0.3) 30%, rgba(184,146,106,0.3) 70%, transparent);
+}
+.hero-content {
+  position: relative; z-index: 2;
+  padding: 0 4rem 0 6rem;
+  max-width: 860px;
+}
+.hero-tag {
+  font-size: 0.7rem;
+  letter-spacing: 0.42em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 2rem;
+  font-weight: 300;
+  opacity: 0;
+  animation: fadeUp 1s ease forwards 0.8s;
+}
+.hero-title {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(2.8rem, 5.5vw, 5rem);
+  font-weight: 400;
+  color: var(--white);
+  line-height: 1.15;
+  margin-bottom: 1.8rem;
+  opacity: 0;
+  animation: fadeUp 1s ease forwards 1s;
+}
+.hero-title em {
+  font-style: italic;
+  color: var(--gold-light);
+}
+.hero-subtitle {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.3rem;
+  font-weight: 300;
+  color: rgba(255,255,255,0.6);
+  line-height: 1.8;
+  max-width: 540px;
+  margin-bottom: 3rem;
+  opacity: 0;
+  animation: fadeUp 1s ease forwards 1.2s;
+}
+.hero-buttons {
+  display: flex; gap: 1.5rem; align-items: center;
+  opacity: 0;
+  animation: fadeUp 1s ease forwards 1.4s;
+}
+.btn-primary {
+  display: inline-flex; align-items: center; gap: 0.8rem;
+  padding: 1rem 2.5rem;
+  background: var(--gold);
+  color: var(--navy-deep);
+  font-family: 'Outfit', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: all 0.4s ease;
+  border: none; cursor: pointer;
+}
+.btn-primary:hover {
+  background: var(--gold-light);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 30px rgba(184,146,106,0.3);
+}
+.btn-primary svg { width: 16px; height: 16px; transition: transform 0.3s; }
+.btn-primary:hover svg { transform: translateX(4px); }
+.btn-secondary {
+  display: inline-flex; align-items: center; gap: 0.8rem;
+  padding: 1rem 2rem;
+  background: transparent;
+  color: rgba(255,255,255,0.7);
+  font-family: 'Outfit', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 400;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  text-decoration: none;
+  border: 1px solid rgba(255,255,255,0.18);
+  transition: all 0.4s ease;
+}
+.btn-secondary:hover {
+  border-color: var(--gold);
+  color: var(--gold);
+}
+
+.hero-scroll {
+  position: absolute;
+  bottom: 3rem; left: 50%;
+  transform: translateX(-50%);
+  display: flex; flex-direction: column;
+  align-items: center; gap: 0.8rem;
+  color: rgba(255,255,255,0.4);
+  font-size: 0.62rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  animation: fadeUp 1s ease forwards 1.8s;
+  opacity: 0;
+}
+.scroll-line {
+  width: 1px; height: 50px;
+  background: linear-gradient(to bottom, var(--gold), transparent);
+  animation: scrollPulse 2s ease-in-out infinite;
+}
+@keyframes scrollPulse {
+  0%, 100% { opacity: 0.4; transform: scaleY(0.6); }
+  50% { opacity: 1; transform: scaleY(1); }
+}
+
+.hero-stats {
+  position: absolute;
+  right: 4rem; bottom: 6rem;
+  display: flex; flex-direction: column; gap: 2.5rem;
+  z-index: 2;
+  opacity: 0;
+  animation: fadeUp 1s ease forwards 1.6s;
+}
+.stat { text-align: right; }
+.stat-number {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.5rem;
+  font-weight: 400;
+  color: var(--gold);
+  line-height: 1;
+}
+.stat-label {
+  font-size: 0.62rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.4);
+  margin-top: 0.4rem;
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ===========================
+   MARQUEE STRIP
+=========================== */
+.marquee-strip {
+  background: var(--gold);
+  padding: 0.9rem 0;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.marquee-inner {
+  display: inline-flex;
+  animation: marqueeScroll 30s linear infinite;
+}
+.marquee-inner span {
+  font-size: 0.68rem;
+  font-weight: 500;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--navy-deep);
+  padding: 0 3rem;
+}
+.marquee-inner span::before {
+  content: '◆';
+  margin-right: 3rem;
+  opacity: 0.5;
+}
+@keyframes marqueeScroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+/* ===========================
+   ABOUT
+=========================== */
+.about {
+  padding: 8rem 4rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6rem;
+  max-width: 1400px;
+  margin: 0 auto;
+  align-items: center;
+}
+.about-image-wrap {
+  position: relative;
+}
+.about-image {
+  width: 100%;
+  aspect-ratio: 3/4;
+  object-fit: cover;
+  object-position: top center;
+  display: block;
+  position: relative;
+}
+.about-image-frame {
+  position: relative;
+  overflow: visible;
+}
+.about-image-frame::before {
+  content: '';
+  position: absolute;
+  top: -1.5rem; left: -1.5rem;
+  right: 1.5rem; bottom: 1.5rem;
+  border: 1px solid var(--gold);
+  opacity: 0.35;
+  z-index: -1;
+  pointer-events: none;
+}
+.about-image-tag {
+  position: absolute;
+  bottom: 2rem; left: -2rem;
+  background: var(--navy);
+  color: var(--gold);
+  padding: 1.2rem 2rem;
+  font-family: 'Playfair Display', serif;
+  font-size: 0.85rem;
+  font-style: italic;
+  letter-spacing: 0.05em;
+  z-index: 2;
+}
+.about-content {
+  padding: 2rem 0;
+}
+.section-tag {
+  font-size: 0.68rem;
+  letter-spacing: 0.4em;
+  text-transform: uppercase;
+  color: var(--gold);
+  font-weight: 400;
+  margin-bottom: 1.5rem;
+  display: flex; align-items: center; gap: 1rem;
+}
+.section-tag::before {
+  content: '';
+  width: 40px; height: 1px;
+  background: var(--gold);
+}
+.section-title {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(2rem, 3vw, 2.8rem);
+  font-weight: 400;
+  color: var(--navy);
+  line-height: 1.25;
+  margin-bottom: 2rem;
+}
+.section-title em {
+  font-style: italic;
+  color: var(--gold);
+}
+.about-text {
+  font-size: 0.95rem;
+  line-height: 1.9;
+  color: var(--text-muted);
+  margin-bottom: 1.5rem;
+}
+.about-credentials {
+  display: flex; gap: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--cream-dark);
+  flex-wrap: wrap;
+}
+.credential {
+  display: flex; flex-direction: column; gap: 0.3rem;
+}
+.credential-value {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.5rem;
+  color: var(--navy);
+}
+.credential-label {
+  font-size: 0.65rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+/* ===========================
+   SERVICES
+=========================== */
+.services {
+  background: var(--navy-deep);
+  padding: 8rem 4rem;
+  position: relative;
+  overflow: hidden;
+}
+.services::before {
+  content: '';
+  position: absolute;
+  top: -200px; right: -200px;
+  width: 600px; height: 600px;
+  background: radial-gradient(circle, rgba(184,146,106,0.06) 0%, transparent 70%);
+  pointer-events: none;
+}
+.services-header {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 5rem;
+}
+.services-header .section-tag { justify-content: center; }
+.services-header .section-tag::before { display: none; }
+.services-header .section-title { color: var(--white); }
+.services-header .section-subtitle {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.15rem;
+  color: rgba(255,255,255,0.45);
+  line-height: 1.8;
+  font-weight: 300;
+}
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.service-card {
+  padding: 3rem 2.5rem;
+  border: 1px solid rgba(255,255,255,0.06);
+  background: rgba(255,255,255,0.02);
+  transition: all 0.5s ease;
+  position: relative;
+  overflow: hidden;
+}
+.service-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 2px;
+  background: linear-gradient(90deg, transparent, var(--gold), transparent);
+  transform: scaleX(0);
+  transition: transform 0.5s ease;
+}
+.service-card:hover::before { transform: scaleX(1); }
+.service-card:hover {
+  border-color: rgba(184,146,106,0.15);
+  background: rgba(184,146,106,0.04);
+  transform: translateY(-4px);
+}
+.service-icon {
+  font-size: 1.8rem;
+  margin-bottom: 1.8rem;
+  color: var(--gold);
+  opacity: 0.8;
+}
+.service-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: var(--white);
+  margin-bottom: 1rem;
+}
+.service-desc {
+  font-size: 0.85rem;
+  line-height: 1.8;
+  color: rgba(255,255,255,0.4);
+  font-weight: 300;
+}
+
+/* ===========================
+   FEATURED PROPERTIES
+=========================== */
+.properties {
+  padding: 8rem 4rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+.properties-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 4rem;
+}
+.properties-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+.property-card {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+.property-image {
+  width: 100%;
+  aspect-ratio: 4/5;
+  object-fit: cover;
+  transition: transform 0.8s ease;
+  display: block;
+}
+.property-card:hover .property-image {
+  transform: scale(1.05);
+}
+.property-overlay {
+  position: absolute; inset: 0;
+  background: linear-gradient(to top, rgba(15,18,25,0.97) 0%, rgba(15,18,25,0.1) 50%, transparent 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 2.5rem 2rem;
+  transition: background 0.5s ease;
+}
+.property-card:hover .property-overlay {
+  background: linear-gradient(to top, rgba(15,18,25,0.99) 0%, rgba(15,18,25,0.3) 60%, rgba(15,18,25,0.1) 100%);
+}
+.property-badge {
+  position: absolute;
+  top: 1.5rem; right: 1.5rem;
+  background: var(--gold);
+  color: var(--navy-deep);
+  font-size: 0.58rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  padding: 0.4rem 0.9rem;
+}
+.property-type {
+  font-size: 0.6rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 0.5rem;
+}
+.property-name {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.3rem;
+  color: var(--white);
+  margin-bottom: 0.4rem;
+  line-height: 1.3;
+}
+.property-location {
+  font-size: 0.76rem;
+  color: rgba(255,255,255,0.45);
+  font-weight: 300;
+  margin-bottom: 1.2rem;
+  display: flex; align-items: center; gap: 0.4rem;
+}
+.property-location::before {
+  content: '◎';
+  font-size: 0.6rem;
+  color: var(--gold);
+  opacity: 0.7;
+}
+.property-price {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.1rem;
+  color: var(--gold-light);
+}
+.property-details {
+  display: flex; gap: 1.5rem;
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(255,255,255,0.08);
+  opacity: 0;
+  transform: translateY(10px);
+  transition: all 0.4s ease;
+}
+.property-card:hover .property-details {
+  opacity: 1;
+  transform: translateY(0);
+}
+.property-detail {
+  font-size: 0.68rem;
+  color: rgba(255,255,255,0.5);
+  letter-spacing: 0.08em;
+}
+.property-detail::before {
+  display: block;
+  font-size: 0.55rem;
+  color: var(--gold);
+  opacity: 0.6;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  margin-bottom: 0.2rem;
+}
+.property-detail.beds::before { content: 'Beds'; }
+.property-detail.size::before { content: 'Size'; }
+.property-detail.view::before { content: 'View'; }
+
+/* ===========================
+   PROCESS / HOW IT WORKS
+=========================== */
+.process {
+  background: var(--cream-dark);
+  padding: 8rem 4rem;
+}
+.process-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.process-header {
+  text-align: center;
+  margin-bottom: 5rem;
+}
+.process-header .section-tag { justify-content: center; }
+.process-header .section-tag::before { display: none; }
+.process-steps {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  position: relative;
+}
+.process-steps::before {
+  content: '';
+  position: absolute;
+  top: 2.5rem; left: 12.5%; right: 12.5%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--gold), transparent);
+  opacity: 0.4;
+}
+.process-step {
+  text-align: center;
+  padding: 2rem 1.5rem;
+  position: relative;
+}
+.step-number {
+  width: 50px; height: 50px;
+  border: 1px solid var(--gold);
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  margin: 0 auto 1.5rem;
+  font-family: 'Playfair Display', serif;
+  font-size: 1.1rem;
+  color: var(--gold);
+  background: var(--cream-dark);
+  position: relative;
+  z-index: 1;
+}
+.step-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.1rem;
+  color: var(--navy);
+  margin-bottom: 0.8rem;
+}
+.step-desc {
+  font-size: 0.83rem;
+  color: var(--text-muted);
+  line-height: 1.7;
+  font-weight: 300;
+}
+
+/* ===========================
+   TESTIMONIALS
+=========================== */
+.testimonials {
+  background: var(--navy);
+  padding: 8rem 4rem;
+  position: relative;
+  overflow: hidden;
+}
+.testimonials::before {
+  content: '"';
+  position: absolute;
+  top: 0; left: 50%;
+  transform: translateX(-50%);
+  font-family: 'Playfair Display', serif;
+  font-size: 18rem;
+  color: rgba(184,146,106,0.05);
+  line-height: 1;
+  pointer-events: none;
+}
+.testimonials-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.testimonials-header {
+  text-align: center;
+  margin-bottom: 5rem;
+}
+.testimonials-header .section-tag { justify-content: center; }
+.testimonials-header .section-tag::before { display: none; }
+.testimonials-header .section-title { color: var(--white); }
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+.testimonial-card {
+  padding: 2.5rem;
+  border: 1px solid rgba(255,255,255,0.06);
+  background: rgba(255,255,255,0.02);
+  transition: all 0.4s ease;
+}
+.testimonial-card:hover {
+  border-color: rgba(184,146,106,0.2);
+  background: rgba(184,146,106,0.03);
+}
+.testimonial-stars {
+  color: var(--gold);
+  font-size: 0.75rem;
+  letter-spacing: 0.2em;
+  margin-bottom: 1.5rem;
+}
+.testimonial-quote {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.05rem;
+  font-weight: 300;
+  font-style: italic;
+  color: rgba(255,255,255,0.75);
+  line-height: 1.75;
+  margin-bottom: 2rem;
+}
+.testimonial-author {
+  color: var(--gold);
+  font-size: 0.82rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+}
+.testimonial-role {
+  color: rgba(255,255,255,0.3);
+  font-size: 0.72rem;
+  margin-top: 0.3rem;
+  letter-spacing: 0.08em;
+}
+
+/* ===========================
+   AREAS
+=========================== */
+.areas {
+  padding: 8rem 4rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+.areas-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+.areas-header .section-tag { justify-content: center; }
+.areas-header .section-tag::before { display: none; }
+.areas-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1rem;
+}
+.area-card {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 3/4;
+  cursor: pointer;
+}
+.area-card img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  transition: transform 0.7s ease;
+}
+.area-card:hover img { transform: scale(1.08); }
+.area-overlay {
+  position: absolute; inset: 0;
+  background: linear-gradient(to top, rgba(15,18,25,0.9) 0%, transparent 60%);
+  display: flex; flex-direction: column;
+  justify-content: flex-end;
+  padding: 1.5rem;
+}
+.area-name {
+  font-family: 'Playfair Display', serif;
+  font-size: 1rem;
+  color: var(--white);
+  margin-bottom: 0.3rem;
+}
+.area-count {
+  font-size: 0.65rem;
+  color: var(--gold);
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+/* ===========================
+   CTA
+=========================== */
+.cta {
+  padding: 8rem 4rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  background: var(--cream);
+}
+.cta-inner {
+  max-width: 700px;
+  margin: 0 auto;
+}
+.cta .section-tag { justify-content: center; }
+.cta .section-tag::before { display: none; }
+.cta .section-title { margin-bottom: 1.5rem; }
+.cta-text {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.15rem;
+  color: var(--text-muted);
+  line-height: 1.8;
+  margin-bottom: 3rem;
+}
+.cta-buttons {
+  display: flex; gap: 1.5rem; justify-content: center; flex-wrap: wrap;
+}
+.cta .btn-primary {
+  background: var(--navy);
+  color: var(--gold);
+}
+.cta .btn-primary:hover {
+  background: var(--gold);
+  color: var(--navy-deep);
+}
+.cta-contact-row {
+  display: flex;
+  justify-content: center;
+  gap: 4rem;
+  margin-top: 4rem;
+  padding-top: 4rem;
+  border-top: 1px solid var(--cream-dark);
+  flex-wrap: wrap;
+}
+.contact-item {
+  text-align: center;
+}
+.contact-item-label {
+  font-size: 0.62rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 0.5rem;
+}
+.contact-item-value {
+  font-family: 'Playfair Display', serif;
+  font-size: 1rem;
+  color: var(--navy);
+}
+
+/* ===========================
+   FOOTER
+=========================== */
+footer {
+  background: var(--navy-deep);
+  padding: 5rem 4rem 2rem;
+}
+.footer-top {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1.5fr;
+  gap: 4rem;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding-bottom: 4rem;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+.footer-logo {
+  width: 130px;
+  margin-bottom: 1.5rem;
+  opacity: 0.85;
+}
+.footer-desc {
+  font-size: 0.85rem;
+  color: rgba(255,255,255,0.35);
+  line-height: 1.8;
+  font-weight: 300;
+  margin-bottom: 1.5rem;
+}
+.footer-tagline {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 0.85rem;
+  font-style: italic;
+  color: var(--gold);
+  opacity: 0.7;
+  letter-spacing: 0.1em;
+}
+.footer-heading {
+  font-size: 0.68rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 1.5rem;
+}
+.footer-links {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+.footer-links a {
+  font-size: 0.85rem;
+  color: rgba(255,255,255,0.4);
+  text-decoration: none;
+  font-weight: 300;
+  transition: color 0.3s;
+}
+.footer-links a:hover { color: var(--white); }
+.footer-contact-item {
+  font-size: 0.85rem;
+  color: rgba(255,255,255,0.4);
+  font-weight: 300;
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+.footer-contact-item strong {
+  display: block;
+  color: rgba(255,255,255,0.6);
+  font-weight: 400;
+  font-size: 0.68rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  margin-bottom: 0.2rem;
+}
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1400px;
+  margin: 2rem auto 0;
+}
+.footer-copy {
+  font-size: 0.7rem;
+  color: rgba(255,255,255,0.2);
+  letter-spacing: 0.08em;
+}
+.footer-socials {
+  display: flex; gap: 1.5rem;
+}
+.footer-socials a {
+  color: rgba(255,255,255,0.3);
+  text-decoration: none;
+  font-size: 0.72rem;
+  letter-spacing: 0.1em;
+  transition: color 0.3s;
+}
+.footer-socials a:hover { color: var(--gold); }
+.footer-rera {
+  font-size: 0.68rem;
+  color: rgba(255,255,255,0.2);
+  letter-spacing: 0.08em;
+  margin-top: 0.5rem;
+}
+
+/* ===========================
+   SCROLL ANIMATIONS
+=========================== */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+@media (max-width: 1200px) {
+  .areas-grid { grid-template-columns: repeat(3, 1fr); }
+  .process-steps { grid-template-columns: repeat(2, 1fr); }
+  .process-steps::before { display: none; }
+}
+
+@media (max-width: 1024px) {
+  .hero-stats { display: none; }
+  .about { grid-template-columns: 1fr; gap: 3rem; }
+  .about-image { aspect-ratio: 4/3; }
+  .about-image-tag { left: 1rem; bottom: 1rem; }
+  .services-grid { grid-template-columns: 1fr 1fr; }
+  .properties-grid { grid-template-columns: 1fr 1fr; }
+  .testimonials-grid { grid-template-columns: 1fr 1fr; }
+  .footer-top { grid-template-columns: 1fr 1fr; gap: 3rem; }
+}
+
+@media (max-width: 768px) {
+  nav { padding: 1rem 1.5rem; }
+  nav.scrolled { padding: 0.7rem 1.5rem; }
+  .hero-content { padding: 0 1.5rem; }
+  .hero-line { left: 1.5rem; }
+  .hero-buttons { flex-direction: column; align-items: flex-start; }
+  .about { padding: 5rem 1.5rem; }
+  .about-image-frame::before { display: none; }
+  .services { padding: 5rem 1.5rem; }
+  .services-grid { grid-template-columns: 1fr; }
+  .properties { padding: 5rem 1.5rem; }
+  .properties-grid { grid-template-columns: 1fr; }
+  .properties-header { flex-direction: column; align-items: flex-start; gap: 1.5rem; }
+  .process { padding: 5rem 1.5rem; }
+  .process-steps { grid-template-columns: 1fr; }
+  .testimonials { padding: 5rem 1.5rem; }
+  .testimonials-grid { grid-template-columns: 1fr; }
+  .areas { padding: 5rem 1.5rem; }
+  .areas-grid { grid-template-columns: repeat(2, 1fr); }
+  .cta { padding: 5rem 1.5rem; }
+  .cta-buttons { flex-direction: column; align-items: center; }
+  .cta-contact-row { gap: 2rem; }
+  footer { padding: 3rem 1.5rem 1.5rem; }
+  .footer-top { grid-template-columns: 1fr; gap: 2rem; }
+  .about-credentials { flex-direction: column; gap: 1.5rem; }
+  .footer-bottom { flex-direction: column; gap: 1rem; text-align: center; }
+}
+</style>
+</head>
+<body>
+
+<!-- ========================
+     PRELOADER
+========================= -->
+<div class="preloader" id="preloader">
+  <img class="preloader-logo" src="logo.png" alt="Marina Dutt Real Estate Dubai">
+  <div class="preloader-tagline">Luxury &nbsp;·&nbsp; Integrity &nbsp;·&nbsp; Excellence</div>
+</div>
+
+<!-- ========================
+     NAVIGATION
+========================= -->
+<nav id="navbar">
+  <div class="nav-logo">
+    <img src="logo.png" alt="Marina Dutt Real Estate Dubai">
+  </div>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#about">About</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#portfolio">Portfolio</a></li>
+    <li><a href="#testimonials">Testimonials</a></li>
+    <li><a href="#areas">Areas</a></li>
+    <li><a href="#contact" class="nav-cta">Book Consultation</a></li>
+  </ul>
+  <div class="hamburger" id="hamburger">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<!-- ========================
+     HERO
+========================= -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-grain"></div>
+  <div class="hero-line"></div>
+  <div class="hero-content">
+    <div class="hero-tag">Luxury Real Estate · Dubai</div>
+    <h1 class="hero-title">Where Vision<br>Meets <em>Exceptional</em><br>Living</h1>
+    <p class="hero-subtitle">German precision meets Dubai ambition. Marina Dutt delivers an unparalleled real estate experience for the world's most discerning buyers and investors.</p>
+    <div class="hero-buttons">
+      <a href="#contact" class="btn-primary">
+        Schedule a Viewing
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+      <a href="#portfolio" class="btn-secondary">Explore Portfolio</a>
+    </div>
+  </div>
+  <div class="hero-stats">
+    <div class="stat">
+      <div class="stat-number">AED 2B+</div>
+      <div class="stat-label">Portfolio Value</div>
+    </div>
+    <div class="stat">
+      <div class="stat-number">12+</div>
+      <div class="stat-label">Years Experience</div>
+    </div>
+    <div class="stat">
+      <div class="stat-number">300+</div>
+      <div class="stat-label">Properties Sold</div>
+    </div>
+  </div>
+  <div class="hero-scroll">
+    <span>Scroll</span>
+    <div class="scroll-line"></div>
+  </div>
+</section>
+
+<!-- ========================
+     MARQUEE STRIP
+========================= -->
+<div class="marquee-strip">
+  <div class="marquee-inner">
+    <span>Palm Jumeirah</span>
+    <span>Downtown Dubai</span>
+    <span>Emirates Hills</span>
+    <span>Dubai Marina</span>
+    <span>Business Bay</span>
+    <span>Dubai Creek Harbour</span>
+    <span>Jumeirah Bay Island</span>
+    <span>DIFC</span>
+    <span>Palm Jumeirah</span>
+    <span>Downtown Dubai</span>
+    <span>Emirates Hills</span>
+    <span>Dubai Marina</span>
+    <span>Business Bay</span>
+    <span>Dubai Creek Harbour</span>
+    <span>Jumeirah Bay Island</span>
+    <span>DIFC</span>
+  </div>
+</div>
+
+<!-- ========================
+     ABOUT
+========================= -->
+<section class="about" id="about">
+  <div class="about-image-wrap reveal">
+    <div class="about-image-frame">
+      <img class="about-image" src="portrait.jpg" alt="Marina Dutt — Luxury Real Estate Agent Dubai">
+      <div class="about-image-tag">Luxury — Integrity — Excellence</div>
+    </div>
+  </div>
+  <div class="about-content reveal">
+    <div class="section-tag">About Marina</div>
+    <h2 class="section-title">A Trusted Name<br>in Dubai <em>Luxury</em></h2>
+    <p class="about-text">
+      Marina Dutt brings a distinctive European sensibility to Dubai's dynamic property market. Born and raised in Germany, she combines meticulous attention to detail with an innate understanding of international luxury standards. Her clients — from European executives to global investors — trust her to navigate Dubai's most exclusive developments with discretion and unrivalled market insight.
+    </p>
+    <p class="about-text">
+      Fluent in German, English, and Russian, Marina bridges cultures and continents, making her the first choice for international buyers seeking a seamless, professional, and deeply personal real estate experience in the UAE.
+    </p>
+    <div class="about-credentials">
+      <div class="credential">
+        <div class="credential-value">RERA</div>
+        <div class="credential-label">Certified Agent</div>
+      </div>
+      <div class="credential">
+        <div class="credential-value">DE / EN / RU</div>
+        <div class="credential-label">Languages</div>
+      </div>
+      <div class="credential">
+        <div class="credential-value">Top 1%</div>
+        <div class="credential-label">Dubai Agents</div>
+      </div>
+      <div class="credential">
+        <div class="credential-value">12+</div>
+        <div class="credential-label">Years in Dubai</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========================
+     SERVICES
+========================= -->
+<section class="services" id="services">
+  <div class="services-header reveal">
+    <div class="section-tag">What We Offer</div>
+    <h2 class="section-title">Bespoke Real Estate <em>Services</em></h2>
+    <p class="section-subtitle">Every client receives a tailored approach — from initial consultation through handover and beyond.</p>
+  </div>
+  <div class="services-grid">
+    <div class="service-card reveal">
+      <div class="service-icon">◈</div>
+      <h3 class="service-title">Luxury Sales</h3>
+      <p class="service-desc">Access Dubai's most prestigious addresses — penthouses, villas, and branded residences across Palm Jumeirah, Downtown, Emirates Hills, and beyond.</p>
+    </div>
+    <div class="service-card reveal">
+      <div class="service-icon">◉</div>
+      <h3 class="service-title">Off-Plan Investment</h3>
+      <p class="service-desc">Curated off-plan opportunities with vetted developers, featuring exclusive payment plans and early-access pricing not available on the open market.</p>
+    </div>
+    <div class="service-card reveal">
+      <div class="service-icon">◇</div>
+      <h3 class="service-title">Portfolio Advisory</h3>
+      <p class="service-desc">Strategic guidance on building a high-yield real estate portfolio in Dubai, with complete market analysis and ROI projections tailored to your goals.</p>
+    </div>
+    <div class="service-card reveal">
+      <div class="service-icon">▣</div>
+      <h3 class="service-title">Relocation Services</h3>
+      <p class="service-desc">End-to-end relocation support for international clients — visa consultation, area guidance, school recommendations, and lifestyle integration.</p>
+    </div>
+    <div class="service-card reveal">
+      <div class="service-icon">◆</div>
+      <h3 class="service-title">Property Management</h3>
+      <p class="service-desc">Comprehensive management for absentee owners including tenant sourcing, maintenance coordination, and quarterly financial reporting.</p>
+    </div>
+    <div class="service-card reveal">
+      <div class="service-icon">○</div>
+      <h3 class="service-title">Golden Visa Guidance</h3>
+      <p class="service-desc">Navigate Dubai's Golden Visa program through qualifying real estate investments, with step-by-step support through the entire application process.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ========================
+     FEATURED PROPERTIES
+========================= -->
+<section class="properties" id="portfolio">
+  <div class="properties-header">
+    <div>
+      <div class="section-tag reveal">Featured Collection</div>
+      <h2 class="section-title reveal">Selected <em>Properties</em></h2>
+    </div>
+    <a href="#contact" class="btn-primary reveal" style="background: var(--navy); color: var(--gold);">
+      Enquire About Listings
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px;"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+    </a>
+  </div>
+  <div class="properties-grid">
+
+    <!-- Property 1 -->
+    <div class="property-card reveal">
+      <img class="property-image" src="prop1.jpg" alt="Signature Villa Palm Jumeirah">
+      <div class="property-badge">For Sale</div>
+      <div class="property-overlay">
+        <div class="property-type">Signature Villa</div>
+        <div class="property-name">Frond K Beachfront Villa</div>
+        <div class="property-location">Palm Jumeirah, Dubai</div>
+        <div class="property-price">AED 45,000,000</div>
+        <div class="property-details">
+          <span class="property-detail beds">5 Bedrooms</span>
+          <span class="property-detail size">12,400 sq.ft</span>
+          <span class="property-detail view">Full Sea View</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Property 2 -->
+    <div class="property-card reveal">
+      <img class="property-image" src="prop2.jpg" alt="Contemporary Villa Palm Jumeirah">
+      <div class="property-badge">For Sale</div>
+      <div class="property-overlay">
+        <div class="property-type">Contemporary Villa</div>
+        <div class="property-name">Barefoot Luxury Residence</div>
+        <div class="property-location">Palm Jumeirah, Dubai</div>
+        <div class="property-price">AED 32,500,000</div>
+        <div class="property-details">
+          <span class="property-detail beds">6 Bedrooms</span>
+          <span class="property-detail size">9,800 sq.ft</span>
+          <span class="property-detail view">Private Beach</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Property 3 -->
+    <div class="property-card reveal">
+      <img class="property-image" src="prop3.webp" alt="Luxury Penthouse Downtown Dubai">
+      <div class="property-badge">For Sale</div>
+      <div class="property-overlay">
+        <div class="property-type">Sky Penthouse</div>
+        <div class="property-name">Downtown Burj View Penthouse</div>
+        <div class="property-location">Downtown Dubai</div>
+        <div class="property-price">AED 28,500,000</div>
+        <div class="property-details">
+          <span class="property-detail beds">4 Bedrooms</span>
+          <span class="property-detail size">8,200 sq.ft</span>
+          <span class="property-detail view">Burj Khalifa View</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Property 4 -->
+    <div class="property-card reveal">
+      <img class="property-image" src="prop4.jpg" alt="Dubai Marina Penthouse">
+      <div class="property-badge">For Sale</div>
+      <div class="property-overlay">
+        <div class="property-type">Marina Penthouse</div>
+        <div class="property-name">Address Marina Residence</div>
+        <div class="property-location">Dubai Marina</div>
+        <div class="property-price">AED 14,200,000</div>
+        <div class="property-details">
+          <span class="property-detail beds">3 Bedrooms</span>
+          <span class="property-detail size">4,100 sq.ft</span>
+          <span class="property-detail view">Marina View</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Property 5 -->
+    <div class="property-card reveal">
+      <img class="property-image" src="prop5.jpg" alt="Dubai Marina Luxury Apartment">
+      <div class="property-badge">For Sale</div>
+      <div class="property-overlay">
+        <div class="property-type">Luxury Apartment</div>
+        <div class="property-name">Marina Skyline Residence</div>
+        <div class="property-location">Dubai Marina</div>
+        <div class="property-price">AED 9,800,000</div>
+        <div class="property-details">
+          <span class="property-detail beds">3 Bedrooms</span>
+          <span class="property-detail size">2,850 sq.ft</span>
+          <span class="property-detail view">Full Marina View</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Property 6 -->
+    <div class="property-card reveal">
+      <img class="property-image" src="prop6.jpg" alt="Business Bay Luxury Residence">
+      <div class="property-badge">Off-Plan</div>
+      <div class="property-overlay">
+        <div class="property-type">Branded Residence</div>
+        <div class="property-name">Dorchester Collection Residences</div>
+        <div class="property-location">Business Bay, Dubai</div>
+        <div class="property-price">AED 18,000,000</div>
+        <div class="property-details">
+          <span class="property-detail beds">4 Bedrooms</span>
+          <span class="property-detail size">5,600 sq.ft</span>
+          <span class="property-detail view">Canal &amp; City View</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ========================
+     HOW IT WORKS
+========================= -->
+<section class="process" id="process">
+  <div class="process-inner">
+    <div class="process-header reveal">
+      <div class="section-tag">The Marina Dutt Method</div>
+      <h2 class="section-title">Your Journey to <em>Ownership</em></h2>
+    </div>
+    <div class="process-steps">
+      <div class="process-step reveal">
+        <div class="step-number">01</div>
+        <div class="step-title">Discovery Call</div>
+        <p class="step-desc">We begin with a confidential consultation to understand your lifestyle, investment goals, and preferred locations — in German, English, or Russian.</p>
+      </div>
+      <div class="process-step reveal">
+        <div class="step-number">02</div>
+        <div class="step-title">Curated Selection</div>
+        <p class="step-desc">Marina personally curates a shortlist of properties — including off-market opportunities — that precisely match your criteria and budget.</p>
+      </div>
+      <div class="process-step reveal">
+        <div class="step-number">03</div>
+        <div class="step-title">Private Viewings</div>
+        <p class="step-desc">Exclusive, unhurried viewings at your convenience. Marina accompanies every visit, providing expert commentary and transparent market context.</p>
+      </div>
+      <div class="process-step reveal">
+        <div class="step-number">04</div>
+        <div class="step-title">Seamless Completion</div>
+        <p class="step-desc">From offer negotiation through legal due diligence, DLD registration, and handover — every detail is handled with German precision.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========================
+     TESTIMONIALS
+========================= -->
+<section class="testimonials" id="testimonials">
+  <div class="testimonials-inner">
+    <div class="testimonials-header reveal">
+      <div class="section-tag">Client Voices</div>
+      <h2 class="section-title">What Our Clients <em>Say</em></h2>
+    </div>
+    <div class="testimonials-grid">
+      <div class="testimonial-card reveal">
+        <div class="testimonial-stars">★★★★★</div>
+        <p class="testimonial-quote">"Marina's understanding of both European expectations and the Dubai market is extraordinary. She found us our dream penthouse on Palm Jumeirah before it even hit the market. An absolute professional."</p>
+        <div class="testimonial-author">Thomas &amp; Claudia Richter</div>
+        <div class="testimonial-role">Berlin, Germany — Palm Jumeirah Buyers</div>
+      </div>
+      <div class="testimonial-card reveal">
+        <div class="testimonial-stars">★★★★★</div>
+        <p class="testimonial-quote">"As a first-time investor in Dubai, I was nervous. Marina guided me through every step with patience and expertise. My Business Bay apartment is already generating excellent returns."</p>
+        <div class="testimonial-author">Stefan Meier</div>
+        <div class="testimonial-role">Munich, Germany — Investment Buyer</div>
+      </div>
+      <div class="testimonial-card reveal">
+        <div class="testimonial-stars">★★★★★</div>
+        <p class="testimonial-quote">"We relocated our entire family from Frankfurt to Dubai. Marina didn't just find us a villa — she found us a community. Her relocation support was invaluable and deeply personal."</p>
+        <div class="testimonial-author">Familie Hoffmann</div>
+        <div class="testimonial-role">Frankfurt, Germany — Emirates Hills Residents</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========================
+     AREAS WE SERVE
+========================= -->
+<section class="areas" id="areas">
+  <div class="areas-header reveal">
+    <div class="section-tag">Prime Locations</div>
+    <h2 class="section-title">Areas We <em>Specialise In</em></h2>
+  </div>
+  <div class="areas-grid">
+    <div class="area-card reveal">
+      <img src="https://images.unsplash.com/photo-1580674684081-7617fbf3d745?w=400&q=80" alt="Palm Jumeirah">
+      <div class="area-overlay">
+        <div class="area-name">Palm Jumeirah</div>
+        <div class="area-count">Villas &amp; Penthouses</div>
+      </div>
+    </div>
+    <div class="area-card reveal">
+      <img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=400&q=80" alt="Downtown Dubai">
+      <div class="area-overlay">
+        <div class="area-name">Downtown Dubai</div>
+        <div class="area-count">Luxury Residences</div>
+      </div>
+    </div>
+    <div class="area-card reveal">
+      <img src="https://images.unsplash.com/photo-1582672060674-bc2bd808a8b5?w=400&q=80" alt="Dubai Marina">
+      <div class="area-overlay">
+        <div class="area-name">Dubai Marina</div>
+        <div class="area-count">Waterfront Living</div>
+      </div>
+    </div>
+    <div class="area-card reveal">
+      <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=400&q=80" alt="Emirates Hills">
+      <div class="area-overlay">
+        <div class="area-name">Emirates Hills</div>
+        <div class="area-count">Gated Estates</div>
+      </div>
+    </div>
+    <div class="area-card reveal">
+      <img src="https://images.unsplash.com/photo-1486325212027-8081e485255e?w=400&q=80" alt="Business Bay">
+      <div class="area-overlay">
+        <div class="area-name">Business Bay</div>
+        <div class="area-count">Urban Luxury</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========================
+     CTA / CONTACT
+========================= -->
+<section class="cta" id="contact">
+  <div class="cta-inner reveal">
+    <div class="section-tag">Begin Your Journey</div>
+    <h2 class="section-title">Ready to Find Your<br><em>Dream Property?</em></h2>
+    <p class="cta-text">Whether you're seeking a waterfront villa, a sky-high penthouse, or a strategic investment — Marina is here to guide you every step of the way with the discretion and expertise you deserve.</p>
+    <div class="cta-buttons">
+      <a href="https://wa.me/971501234567" class="btn-primary" style="background:var(--navy);color:var(--gold);">
+        WhatsApp Marina
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px;"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+      <a href="mailto:marina@marinadutt.com" class="btn-secondary" style="color:var(--navy);border-color:var(--navy);">
+        Send an Email
+      </a>
+    </div>
+    <div class="cta-contact-row">
+      <div class="contact-item">
+        <div class="contact-item-label">Phone &amp; WhatsApp</div>
+        <div class="contact-item-value">+971 50 123 4567</div>
+      </div>
+      <div class="contact-item">
+        <div class="contact-item-label">Email</div>
+        <div class="contact-item-value">marina@marinadutt.com</div>
+      </div>
+      <div class="contact-item">
+        <div class="contact-item-label">Office</div>
+        <div class="contact-item-value">Dubai Marina, UAE</div>
+      </div>
+      <div class="contact-item">
+        <div class="contact-item-label">Languages</div>
+        <div class="contact-item-value">DE · EN · RU</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========================
+     FOOTER
+========================= -->
+<footer>
+  <div class="footer-top">
+    <div>
+      <img class="footer-logo" src="logo.png" alt="Marina Dutt Real Estate Dubai">
+      <p class="footer-desc">Your trusted partner for luxury real estate in Dubai. German precision, global vision, local expertise. RERA certified and committed to the highest standards of professional service.</p>
+      <div class="footer-tagline">Luxury · Integrity · Excellence</div>
+    </div>
+    <div>
+      <div class="footer-heading">Quick Links</div>
+      <ul class="footer-links">
+        <li><a href="#about">About Marina</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#portfolio">Properties</a></li>
+        <li><a href="#testimonials">Testimonials</a></li>
+        <li><a href="#areas">Areas</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-heading">Prime Areas</div>
+      <ul class="footer-links">
+        <li><a href="#areas">Palm Jumeirah</a></li>
+        <li><a href="#areas">Downtown Dubai</a></li>
+        <li><a href="#areas">Emirates Hills</a></li>
+        <li><a href="#areas">Dubai Marina</a></li>
+        <li><a href="#areas">Business Bay</a></li>
+        <li><a href="#areas">Dubai Creek Harbour</a></li>
+        <li><a href="#areas">Jumeirah Bay Island</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-heading">Get in Touch</div>
+      <div class="footer-contact-item">
+        <strong>Office</strong>
+        Dubai Marina, Marina Plaza<br>Dubai, UAE
+      </div>
+      <div class="footer-contact-item">
+        <strong>Phone &amp; WhatsApp</strong>
+        +971 50 123 4567
+      </div>
+      <div class="footer-contact-item">
+        <strong>Email</strong>
+        marina@marinadutt.com
+      </div>
+      <div class="footer-contact-item">
+        <strong>RERA Registration</strong>
+        Certified Dubai Real Estate Agent
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div>
+      <div class="footer-copy">&copy; 2026 Marina Dutt Real Estate. All rights reserved.</div>
+      <div class="footer-rera">RERA Certified · Dubai Land Department Registered · Licensed Brokerage UAE</div>
+    </div>
+    <div class="footer-socials">
+      <a href="#">Instagram</a>
+      <a href="#">LinkedIn</a>
+      <a href="#">YouTube</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+// Preloader
+window.addEventListener('load', () => {
+  setTimeout(() => {
+    document.getElementById('preloader').classList.add('hidden');
+  }, 1600);
+});
+
+// Navbar scroll
+const nav = document.getElementById('navbar');
+window.addEventListener('scroll', () => {
+  nav.classList.toggle('scrolled', window.scrollY > 80);
+});
+
+// Hamburger toggle
+document.getElementById('hamburger').addEventListener('click', () => {
+  document.getElementById('navLinks').classList.toggle('mobile-open');
+});
+
+// Close mobile nav on link click
+document.querySelectorAll('#navLinks a').forEach(a => {
+  a.addEventListener('click', () => {
+    document.getElementById('navLinks').classList.remove('mobile-open');
+  });
+});
+
+// Scroll reveal
+const reveals = document.querySelectorAll('.reveal');
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry, i) => {
+    if (entry.isIntersecting) {
+      setTimeout(() => {
+        entry.target.classList.add('visible');
+      }, i * 80);
+      observer.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+reveals.forEach(el => observer.observe(el));
+
+// Smooth scroll for anchor links
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+  a.addEventListener('click', e => {
+    e.preventDefault();
+    const target = document.querySelector(a.getAttribute('href'));
+    if (target) target.scrollIntoView({ behavior: 'smooth' });
+  });
+});
+</script>
+</body>
+</html>
